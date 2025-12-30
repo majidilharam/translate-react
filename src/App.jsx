@@ -1,13 +1,9 @@
-
-
-
-
 import './App.css'
 
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import LayananKami from './components/LayananKami'
-import LayananKami2 from './components/LayananKami2'
+import PelayananKami from './components/PelayananKami'
 import HubungiKami from './components/HubungiKami'
 import Footer from './components/Footer'
 
@@ -19,7 +15,7 @@ function App() {
       <Navbar />
       <Hero />
       <LayananKami />
-      <LayananKami2 />
+      <PelayananKami />
       <HubungiKami />
       <Footer />
     </>

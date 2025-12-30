@@ -1,15 +1,10 @@
-import { useEffect } from "react"
+import { CheckCircle } from "react-feather"
 
 
-function LayananKami2() {
-
-  useEffect(() => {
-    feather.replace()
-  }, [])
-
+function PelayananKami() {
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 py-12 justify-center items-center lg:py-8 px-16 gap-8">
+    <div className="flex flex-col md:flex-row py-12 justify-center items-center lg:py-8 px-16 gap-8">
       <img src="/bpkb.png" alt="image" />
       <div className="flex flex-col gap-6 ">
         <h1 className="font-semibold text-2xl leading-none text-gray-900 ">Mengapa Memilih Layanan Kami?</h1>
@@ -20,17 +15,17 @@ function LayananKami2() {
 
         <div className="space-y-2 ">
           <div className="flex items-start space-x-2">
-            <i data-feather="check-circle" style={{ color: "green" }}></i><span
+            <CheckCircle className="text-green-700" /><span
               className="font-normal text-base leading-relaxed text-gray-700">Proses Cepat & Efisien</span>
           </div>
 
           <div className="flex items-start space-x-2">
-            <i data-feather="check-circle" style={{ color: "green" }}></i><span
+            <CheckCircle className="text-green-700" /><span
               className="font-normal text-base leading-relaxed text-gray-700">Aman & Terpercaya</span>
           </div>
 
           <div className="flex items-start space-x-2">
-            <i data-feather="check-circle" style={{ color: "green" }}></i><span
+            <CheckCircle className="text-green-700" /><span
               className="font-normal text-base leading-relaxed text-gray-700">Harga Jujur & Transparan</span>
           </div>
         </div>
@@ -39,4 +34,4 @@ function LayananKami2() {
   )
 }
 
-export default LayananKami2
+export default PelayananKami
