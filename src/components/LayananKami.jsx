@@ -1,4 +1,26 @@
 import { Calendar, Users, FilePlus, Truck } from "react-feather"
+const LayananItems = [
+    {
+        title: 'Perpanjang STNK',
+        description: 'Perpanjangan STNK tanpa perlu antre di kantor Samsat. Proses cepat, transparan, dan dapat dilakukan hanya dengan mengirimkan dokumen yang diperlukan.',
+        icon: Calendar
+    },
+    {
+        title: 'Balik Nama Kendaraan',
+        description: 'Urus perpindahan kepemilikan kendaraan Anda dengan aman dan rapi. Kami tangani proses administrasi hingga STNK baru terbit atas nama Anda.',
+        icon: Users
+    },
+    {
+        title: 'Pembuatan STNK Baru',
+        description: 'Layanan pembuatan STNK baru untuk kendaraan yang hilang, rusak, atau baru dibeli dari luar daerah. Proses dibantu dari awal sampai selesai.',
+        icon: FilePlus
+    },
+    {
+        title: 'Mutasi Kendaraan',
+        description: 'Layanan mutasi kendaraan untuk Anda yang pindah domisili atau membeli kendaraan dari luar daerah. Proses dilakukan mulai dari cek fisik, pengurusan berkas, hingga penerbitan data baru sesuai alamat tujuan.',
+        icon: Truck
+    }
+]
 
 function LayananKami() {
     return (
@@ -7,49 +29,21 @@ function LayananKami() {
                 <div className="text-center">
                     <h1 className="font-bold text-3xl text-center pt-12">Layanan Kami</h1>
                 </div>
-                <div className="flex flex-col md:flex-row gap-4 p-6 justify-between lg:px-16 py-12 ">
-                    <div className="border-0 shadow-xl rounded-2xl p-4 bg-white">
-                        <div className="border-0 rounded-md w-fit p-2 bg-blue-200">
-                            <Calendar className="text-blue-500" />
-                        </div>
-                        <h2 className="font-bold my-4">Perpanjang STNK</h2>
-                        <p className="font-medium text-gray-600">Perpanjangan STNK tanpa perlu antre<br />
-                            di kantor Samsat. Proses cepat,<br />
-                            transparan, dan dapat dilakukan hanya<br />
-                            dengan mengirimkan dokumen yang diperlukan.</p>
+                <div className="flex flex-col md:flex-row gap-4 p-6 justify-between lg:px-16 py-12">
+                    <div className="flex gap-4 p-4 ">
+                        {LayananItems.map(({ title, description, icon: Icon }, index) => (
+                            <div key={index} className="mb-8">
+                                <div className="border-0 shadow-xl p-4 rounded-2xl">
+                                    <div className="border-0 rounded-md w-fit p-2 bg-blue-200">
+                                        <Icon className="text-blue-500" />
+                                    </div>
+                                    <h2 className="font-bold my-4">{title}</h2>
+                                    <p className="font-medium text-gray-600">{description}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                    <div className="border-0 shadow-xl rounded-2xl p-4 bg-white">
-                        <div className="border-0 rounded-md w-fit p-2 bg-blue-200">
-                            <Users className="text-blue-500" />
-                        </div>
-                        <h2 className="font-bold my-4">Balik Nama Kendaraan</h2>
-                        <p className="font-medium text-gray-600">Urus perpindahan kepemilikan<br />
-                            kendaraan Anda dengan aman dan<br />
-                            rapi. Kami tangani proses administrasi<br />
-                            hingga STNK baru terbit atas nama<br /> Anda.</p>
-                    </div>
-                    <div className="border-0 shadow-xl rounded-2xl p-4 bg-white ">
-                        <div className="border-0 rounded-md w-fit p-2 bg-blue-200">
-                            <FilePlus className="text-blue-500" />
-                        </div>
-                        <h2 className="font-bold my-4">Pembuatan STNK Baru</h2>
-                        <p className="font-medium text-gray-600">Layanan pembuatan STNK baru untuk<br />
-                            kendaraan yang hilang, rusak, atau<br />
-                            baru dibeli dari luar daerah. Proses<br />
-                            dibantu dari awal sampai selesai.</p>
-                    </div>
-                    <div className="border-0 shadow-xl rounded-2xl p-4 bg-white ">
-                        <div className="border-0 rounded-md w-fit p-2 bg-blue-200">
-                            <Truck className="text-blue-500" />
-                        </div>
-                        <h2 className="font-bold my-4">Mutasi Kendaraan</h2>
-                        <p className="font-medium text-gray-600">Layanan mutasi kendaraan untuk Anda<br />
-                            yang pindah domisili atau membeli<br />
-                            kendaraan dari luar daerah. Proses<br />
-                            dilakukan mulai dari cek fisik,<br />
-                            pengurusan berkas, hingga penerbitan<br />
-                            data baru sesuai alamat tujuan.</p>
-                    </div>
+
                 </div>
 
             </div>
